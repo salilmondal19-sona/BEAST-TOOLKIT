@@ -69,8 +69,7 @@ public class MainActivity extends Activity {
         p.setMargins(0, 15, 0, 5);
         root.addView(card, p);
 
-        card.setOnClickListener(v -> {
-            if (type == 0) showRAM();
+        card.setOnClickListener(v ->            if (type == 0) showRAM();
             else if (type == 1) showStorage();
             else if (type == 2) showBattery();
             else if (type == 3) show("GAMING MODE",
