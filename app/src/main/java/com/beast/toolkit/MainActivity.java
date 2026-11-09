@@ -73,14 +73,33 @@ public class MainActivity extends Activity {
             if (type == 0) showRAM();
             else if (type == 1) showStorage();
             else if (type == 2) showBattery();
-            else if (type == 3) show("GAMING MODE",
-                "Use your phone's built-in Game Mode.");
-            else showRefresh();
-        });
+else if (type == 3) showGamingPanel();        });
     }
 
-    void show(String title, String message) {
-        new AlertDialog.Builder(this)
+void showGamingPanel() {
+    String info =
+        "⚡ BEAST GAMING PANEL\n\n" +
+        "🎮 GAMING TIPS\n" +
+        "• Close unused apps\n" +
+        "• Keep battery above 20%\n" +
+        "• Enable Do Not Disturb\n\n" +
+        "🔥 PERFORMANCE\n" +
+        "• Check available RAM\n" +
+        "• Keep storage free\n\n" +
+        "🎯 FREE FIRE\n" +
+        "• Customize HUD\n" +
+        "• Use comfortable sensitivity";
+
+    show("BEAST GAMING MODE", info);
+}
+
+void show(String title, String message) {
+    new AlertDialog.Builder(this)
+        .setTitle(title)
+        .setMessage(message)
+        .setPositiveButton("OK", null)
+        .show();
+}        new AlertDialog.Builder(this)
             .setTitle(title)
             .setMessage(message)
             .setPositiveButton("OK", null)
