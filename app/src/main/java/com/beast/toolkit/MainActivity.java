@@ -45,54 +45,6 @@ public class MainActivity extends Activity {
         addCard("RAM MONITOR", 0);
         addCard("STORAGE MONITOR", 1);
         addCard("BATTERY MONITOR", 2);
-        addCard("GAMING MODE", 3
-package com.beast.toolkit;
-
-import android.app.Activity;
-import android.app.ActivityManager;
-import android.app.AlertDialog;
-import android.os.Bundle;
-import android.os.StatFs;
-import android.os.Environment;
-import android.graphics.Color;
-import android.graphics.Typeface;
-import android.graphics.drawable.GradientDrawable;
-import android.view.Gravity;
-import android.widget.*;
-
-public class MainActivity extends Activity {
-
-    LinearLayout root;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        ScrollView scroll = new ScrollView(this);
-        root = new LinearLayout(this);
-        root.setOrientation(1);
-        root.setPadding(20, 30, 20, 20);
-        root.setBackgroundColor(Color.rgb(5, 10, 8));
-
-        scroll.addView(root);
-
-        TextView title = new TextView(this);
-        title.setText("BEAST MODE");
-        title.setTextSize(32);
-        title.setTextColor(Color.GREEN);
-        title.setGravity(Gravity.CENTER);
-        title.setTypeface(null, Typeface.BOLD);
-        root.addView(title);
-
-        TextView sub = new TextView(this);
-        sub.setText("ULTIMATE CONTROL PANEL");
-        sub.setTextColor(Color.GRAY);
-        sub.setGravity(Gravity.CENTER);
-        root.addView(sub);
-
-        addCard("RAM MONITOR", 0);
-        addCard("STORAGE MONITOR", 1);
-        addCard("BATTERY MONITOR", 2);
         addCard("GAMING MODE", 3);
         addCard("REFRESH RATE", 4);
 
