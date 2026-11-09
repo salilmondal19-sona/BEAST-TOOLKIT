@@ -99,11 +99,6 @@ void show(String title, String message) {
         .setMessage(message)
         .setPositiveButton("OK", null)
         .show();
-}        new AlertDialog.Builder(this)
-            .setTitle(title)
-            .setMessage(message)
-            .setPositiveButton("OK", null)
-            .show();
     }
 
     void showRAM() {
